@@ -78,7 +78,6 @@ MIT License – Free to use and modify.
 
 ## 👨‍🎤 Credits
 
-Built by **Natnael Darsema** with love for music and clean code. 🎶  
-Design inspired by modern music streaming platforms.
+Built by **Natnael Darsema** with love for music and clean code. 🎶 
 
 
