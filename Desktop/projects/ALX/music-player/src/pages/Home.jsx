@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import TrackList from "../components/TrackList";
 import MusicPlayer from "../components/MusicPlayer";
 import { TrackListSkeleton } from "../components/TrackListSkeleton";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { user, logout } = useAuth();
@@ -100,8 +101,15 @@ const Home = () => {
         <h1 className="text-xl font-bold truncate max-w-[50%]">
           {searchQuery ? `Search: ${searchQuery}` : "Popular Tracks"}
         </h1>
+        
         <div className="flex items-center gap-4">
           <span className="text-sm hidden sm:inline">{user?.email || "Guest"}</span>
+            <Link
+                to="/profile"
+                className="bg-blue-500 hover:bg-blue-700 px-3 py-2 rounded text-sm sm:text-lg transition"
+                >
+            Profile
+            </Link>
           <button
             onClick={logout}
             className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded text-sm sm:text-lg transition"
