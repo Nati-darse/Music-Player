@@ -62,9 +62,10 @@ const Home = () => {
     setError("");
     setSearchQuery(query);
     try {
-      const response = await fetch(
-        `https://api.deezer.com/search?q=${encodeURIComponent(query)}`
-      );
+        const response = await fetch(
+            `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${encodeURIComponent(query)}`
+          );
+          
       if (!response.ok) throw new Error("Search failed");
       const data = await response.json();
       setTracks(data.data || []);

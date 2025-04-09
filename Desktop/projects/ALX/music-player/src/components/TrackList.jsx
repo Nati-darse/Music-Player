@@ -1,12 +1,14 @@
-import React from "react";
 import TrackCard from "./TrackCard";
-import LoadingSpinner from "./LoadingSpinner";
-import ErrorMessage from "./ErrorMessage";
 
-const TrackList = ({ tracks, onPlay, currentTrack, isLoading, error }) => {
-  if (isLoading) return <LoadingSpinner />;
-  if (error) return <ErrorMessage message={error} />;
-  if (!tracks?.length) return <p className="text-gray-400 text-center py-8">No tracks found. Try a different search.</p>;
+const TrackList = ({ tracks, onPlay, currentTrack, isPlaying }) => {
+  if (!tracks?.length) {
+    return (
+      <div className="text-center py-12 text-gray-400">
+        <div className="text-4xl mb-4">🎵</div>
+        <p>No tracks available. Try searching for music.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -16,6 +18,7 @@ const TrackList = ({ tracks, onPlay, currentTrack, isLoading, error }) => {
           track={track} 
           onPlay={onPlay}
           isCurrent={currentTrack?.id === track.id}
+          isPlaying={currentTrack?.id === track.id && isPlaying}
         />
       ))}
     </div>
