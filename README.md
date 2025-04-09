@@ -1,7 +1,6 @@
 # 🎧 Migana Music Player
 
 Migana Music Player is a modern, responsive web application built with **React** and **Tailwind CSS** that allows users to search for and stream music using the [Deezer API](https://developers.deezer.com/api). The app features a sleek UI, real-time search, and an interactive audio player.
-
 ## 🚀 Features
 
 - 🔍 Search Music – Find songs and artists using live search.
