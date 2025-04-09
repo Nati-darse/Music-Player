@@ -51,5 +51,4 @@ const TrackCard = ({ track, onPlay, isCurrent, isPlaying }) => {
     </div>
   );
 };
-
 export default TrackCard;
